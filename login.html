@@ -1,5 +1,6 @@
 <html>
   <head>
+	  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   </head>
   <body>
     <form>
@@ -10,7 +11,7 @@
 	  <script src="http://code.jquery.com/jquery-latest.js"></script>
 	  <script>
 		  $(function(){
-		  	$("#btn").on("click",functiono(){
+		  	$("#btn").on("click",function(){
 				var userName = $("#userName").val().trim();
 			  	var psw = $("#psw").val().trim();
 			  	alert(userName+"-----"+psw);
