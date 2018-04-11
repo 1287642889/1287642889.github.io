@@ -30,7 +30,7 @@
 									url:"https://1287642889.github.io/currentUserJson.json",
 									dataType:"json",
 									success:function(currentUser){
-										currentUser.userName = userName;
+										currentUser["userName"] = userName;
 									}
 								})
 								window.location.href="https://1287642889.github.io/index";
