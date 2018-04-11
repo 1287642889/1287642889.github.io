@@ -30,6 +30,7 @@
 									url:"https://1287642889.github.io/currentUserJson.json",
 									dataType:"json",
 									success:function(currentUser){
+										alert(JSON.stringify(currentUser));
 										currentUser["userName"] = userName;
 									}
 								})
