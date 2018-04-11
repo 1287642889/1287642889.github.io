@@ -7,6 +7,7 @@
         用户名：<input type="text" id="userName"/><br/>
         密码：<input type="password" id="psw"/><br/>
 	<input type="button" value="登录" id="btn"/>
+	<span id="mess"></span>
     </form>
 	  <script src="http://code.jquery.com/jquery-latest.js"></script>
 	  <script>
@@ -21,11 +22,16 @@
 					dataType: "json",//数据类型可以为 text xml json  script  jsonp
 				  	success: function(result){//返回的参数就是 action里面所有的有get和set方法的参数
 						alert(result.length);
+						boolean flag = false;
 					    for(var i =0;i<result.length;i++){
 							if(result[i].userName === userName && result[i].psw === psw){
+								flag = true;
 								window.location.href="https://1287642889.github.io/index";
 							}
-						}
+					    }
+					    if(!flag){
+					       $("#mess").html("用户名或密码错误！");
+					    }
 					}
 				})
 			})
