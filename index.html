@@ -3,14 +3,20 @@
 		 <title>个人博客</title>
 	</head>
 	<body>
-		<h1>this is my first blog.</h1>
+		<h1>欢迎您，<span></span></h1>
 	</body>
 </html>
-$.ajax({
-									type:"GET",
-									url:"https://1287642889.github.io/currentUserJson.json",
-									dataType:"json",
-									success:function(currentUser){
-										currentUser.userName = userName;
-									}
-								})
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$.ajax({
+			type:"GET",
+			url:"https://1287642889.github.io/currentUserJson.json",
+			dataType:"json",
+			success:function(currentUser){
+				$("span").html(currentUser.userName);
+			}
+		})
+	})
+</script>
+
