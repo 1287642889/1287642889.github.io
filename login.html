@@ -14,7 +14,19 @@
 		  	$("#btn").on("click",function(){
 				var userName = $("#userName").val().trim();
 			  	var psw = $("#psw").val().trim();
-			  	alert(userName+"-----"+psw);
+				$.getJSON('/userJson//',function(users){
+					$('#info').html('用户名：' + oData.username + '<br>用户ID：' + oData.userid);
+					$.ajax({
+  					  url: "https://1287642889.github.io/index",
+					  data: {
+					    userName:userName,
+					    psw:psw
+					  },
+					  success: function( result ) {
+					    $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
+					  }
+					});
+				})
 			})
 		  })
 	  </script>
