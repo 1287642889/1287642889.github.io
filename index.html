@@ -15,7 +15,7 @@
 			url:"https://1287642889.github.io/currentUserJson.json",
 			dataType:"json",
 			success:function(currentUser){
-				alert("当前用户："+currentUser);
+				alert(JSON.stringify(currentUser));
 				$("span").html(currentUser.userName);
 			}
 		})
