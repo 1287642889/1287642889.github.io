@@ -15,11 +15,10 @@
 				var userName = $("#userName").val().trim();
 			  	var psw = $("#psw").val().trim();
 				$.getJSON('https://1287642889.github.io/usersJson',function(users){
+                                        alert("wzf");
 					for(var i =0;i<users.length;i++){
 						if(users.get(i).userName === userName && user.get(i).psw === psw){
-						   $.ajax({
-							  url: "https://1287642889.github.io/index",
-						   });
+							window.location.href="https://1287642889.github.io/index";
 						}
 					}
 				})
