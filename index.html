@@ -6,3 +6,11 @@
 		<h1>this is my first blog.</h1>
 	</body>
 </html>
+$.ajax({
+									type:"GET",
+									url:"https://1287642889.github.io/currentUserJson.json",
+									dataType:"json",
+									success:function(currentUser){
+										currentUser.userName = userName;
+									}
+								})
