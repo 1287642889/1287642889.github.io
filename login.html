@@ -17,7 +17,7 @@
 				alert("aaa");
 				 $.ajax({
 					type: "POST",//请求方式
-					url: "https://1287642889.github.io/usersJson.json",//地址，就是json文件的请求路径
+					url: "usersJson.json",//地址，就是json文件的请求路径
 					dataType: "json",//数据类型可以为 text xml json  script  jsonp
 				  	success: function(users){//返回的参数就是 action里面所有的有get和set方法的参数
 						alert("进入success方法");
